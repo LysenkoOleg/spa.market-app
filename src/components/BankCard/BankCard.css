@@ -1,0 +1,30 @@
+.bankCard-container {
+	background-image: var(--purpure-gradient);
+	box-shadow: 2px 2px 10px 1px #a3a3a3;
+	border-radius: 1em;
+	color: white;
+	padding: 1em;
+	position: relative;
+}
+
+.bankCard-icon {
+	position: absolute;
+	top: 0.5em;
+	right: 0;
+	width: 4em;
+}
+
+.bankCard-month-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.bankCard-month {
+	display: flex;
+	align-items: center;
+}
+
+.bankCard-qrCodeIcon {
+	width: 4em;
+	filter: invert(1);
+}
