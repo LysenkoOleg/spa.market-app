@@ -8,10 +8,24 @@
 	background-image: var(--orange-gradient);
 	position: relative;
 }
+
+.card-container.is-added {
+	background-image: var(--violet-gradient);
+}
+
 .card-icon {
 	width: 2em;
 	filter: invert(1);
 	position: absolute;
+}
+
+.card-add-icon {
+	width: 1.3em;
+	cursor: pointer;
+	filter: invert(1);
+	position: absolute;
+	top: 0.5em;
+	right: 1em;
 }
 
 .card-price {

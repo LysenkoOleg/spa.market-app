@@ -7,11 +7,15 @@ import statisticsIcon from '../../assets/icons/statistics.svg'
 import signoutIcon from '../../assets/icons/signout.svg'
 
 class Menu extends React.Component {
+	onMenuItemClick = () => {
+		console.log(1)
+	}
+	
 	render() {
 		return (
 			<div className='menu-container'>
 				<div className='menu-items'>
-					<div className='menu-item'>
+					<div className='menu-item' onClick={this.onMenuItemClick}>
 						<img
 							className='menu-item-icon'
 							src={homeIcon}
