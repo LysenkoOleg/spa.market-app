@@ -12,6 +12,10 @@
 	gap: 1em;
 }
 
+.menu-item.active {
+	background-color: rgba(202, 176, 255, 0.53);
+}
+
 .menu-item {
 	display: flex;
 	justify-content: center;
@@ -19,6 +23,8 @@
 	width: 3em;
 	height: 3em;
 	border-radius: 1em;
+	cursor: pointer;
+	transition: background-color 0.25s ease;
 }
 
 .menu-item-icon {

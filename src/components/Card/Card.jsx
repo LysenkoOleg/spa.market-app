@@ -3,30 +3,17 @@ import './Card.css'
 
 import cardIcon from '../../assets/icons/book.svg'
 import addCardIcon from '../../assets/icons/shopping.svg'
-import { logDOM } from '@testing-library/dom';
 
 class Card extends React.Component {
-	state = {
-		isAdded: false
-	}
-	
-	toggleIsAdded = () => {
-		this.setState((prevState) => {
-			console.log(prevState);
-			return {
-				...prevState,
-				isAdded: !prevState.isAdded
-			}
-		})
-	}
-	
 	render() {
 		const {
 			cardPrice = '0.00',
-			cardName = 'item'
+			cardName = 'item',
+			isAdded,
+			buyCard
 		} = this.props
 		
-		const cardClass = this.state.isAdded ? ' is-added' : ''
+		const cardClass = isAdded ? ' is-added' : ''
 		
 		return (
 			<div className={'card-container' + cardClass}>
@@ -35,7 +22,7 @@ class Card extends React.Component {
 					src={addCardIcon}
 					alt=''
 					width='' height='' loading='lazy'
-					onClick={this.toggleIsAdded}
+					onClick={buyCard}
 				/>
 				<img
 					className='card-icon'

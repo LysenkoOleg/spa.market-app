@@ -1,13 +1,19 @@
 import React from 'react';
 import Card from '../../../../components/Card/Card';
 
-const Shopping = ({items}) => {
+const Shopping = ({items, buyCard}) => {
 	
 	return (
 		<>
 			{
-				items.map(({name, price}) => (
-					<Card cardPrice={price} cardName={name}/>
+				items.map(({id, name, price, isAdded}) => (
+					<Card
+						id={id}
+						cardPrice={price}
+						cardName={name}
+						isAdded={isAdded}
+						buyCard={() => buyCard(id)}
+					/>
 				))
 			}
 		</>
